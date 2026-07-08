@@ -1,0 +1,6 @@
+dist/
+*.user
+*.suo
+*.tmp
+*.log
+REPO_PTBR_Backups/
