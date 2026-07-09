@@ -6,18 +6,18 @@ Tradução contextual em português do Brasil para **R.E.P.O**, criada e organiz
 
 Baixe o instalador pronto aqui:
 
-**[REPO-Traducao-PT-BR-Installer.exe](https://github.com/WellingtonDiasCF/REPO-traducao-PT-BR/releases/latest/download/REPO-Traducao-PT-BR-Installer.exe)**
+**[REPOTraducaoPTBRInstaller.exe](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)**
 
 Também há uma cópia do `.exe` direto na raiz deste repositório:
 
-**[REPO-Traducao-PT-BR-Installer.exe](./REPO-Traducao-PT-BR-Installer.exe)**
+**[REPOTraducaoPTBRInstaller.exe](./REPOTraducaoPTBRInstaller.exe)**
 
 ## Instalação pelo EXE
 
 1. Feche o R.E.P.O. se ele estiver aberto.
-2. Baixe `REPO-Traducao-PT-BR-Installer.exe`.
+2. Baixe `REPOTraducaoPTBRInstaller.exe`.
 3. Execute o instalador.
-4. Se o Windows mostrar SmartScreen, clique em **Mais informações** e depois em **Executar assim mesmo**.
+4. Se o Windows mostrar SmartScreen, leia a seção "Aviso de Segurança" abaixo.
 5. O instalador tenta encontrar a pasta do jogo automaticamente pela Steam.
 6. Se ele pedir o caminho, cole a pasta que contém `REPO.exe`, por exemplo:
 
@@ -98,6 +98,18 @@ Antes de instalar, o `.exe` cria um backup em:
 
 Para desfazer, copie os arquivos desse backup de volta para a pasta do jogo.
 
+## Aviso de Segurança
+
+O instalador ainda não é assinado digitalmente. Por isso, alguns navegadores ou o Windows SmartScreen podem avisar que o arquivo não é muito baixado ou não é confiável.
+
+Para remover esse aviso de forma correta, é necessário assinar o `.exe` com um certificado de code signing emitido por uma autoridade certificadora. Depois disso, o arquivo ainda precisa ganhar reputação com downloads reais, principalmente no SmartScreen da Microsoft.
+
+Enquanto o projeto não tiver assinatura digital, baixe sempre pela release oficial deste repositório do **Wellington Dias** e confira se o nome do arquivo é:
+
+```text
+REPOTraducaoPTBRInstaller.exe
+```
+
 ## Build
 
 Para compilar o instalador:
@@ -109,8 +121,8 @@ Para compilar o instalador:
 O executável sai em dois lugares:
 
 ```text
-dist\REPO-PTBR-Contextual-Installer.exe
-REPO-Traducao-PT-BR-Installer.exe
+dist\REPOTraducaoPTBRInstaller.exe
+REPOTraducaoPTBRInstaller.exe
 ```
 
 ## Créditos

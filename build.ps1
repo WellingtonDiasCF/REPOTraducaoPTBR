@@ -4,8 +4,8 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $src = Join-Path $root 'src\Installer.cs'
 $payload = Join-Path $root 'src\payload.zip'
 $dist = Join-Path $root 'dist'
-$out = Join-Path $dist 'REPO-PTBR-Contextual-Installer.exe'
-$publicOut = Join-Path $root 'REPO-Traducao-PT-BR-Installer.exe'
+$out = Join-Path $dist 'REPOTraducaoPTBRInstaller.exe'
+$publicOut = Join-Path $root 'REPOTraducaoPTBRInstaller.exe'
 $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 
 if (-not (Test-Path -LiteralPath $csc)) {
