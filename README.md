@@ -100,11 +100,11 @@ Para desfazer, copie os arquivos desse backup de volta para a pasta do jogo.
 
 ## Aviso de Segurança
 
-O instalador ainda não é assinado digitalmente. Por isso, alguns navegadores ou o Windows SmartScreen podem avisar que o arquivo não é muito baixado ou não é confiável.
+Alguns navegadores e o Windows SmartScreen podem mostrar aviso porque este é um `.exe` novo, pouco baixado e sem assinatura digital pública associada a uma reputação conhecida.
 
-Para remover esse aviso de forma correta, é necessário assinar o `.exe` com um certificado de code signing emitido por uma autoridade certificadora. Depois disso, o arquivo ainda precisa ganhar reputação com downloads reais, principalmente no SmartScreen da Microsoft.
+Isso não é um erro do mod em si. É um aviso de reputação do sistema/navegador para arquivos executáveis novos distribuídos pela internet.
 
-Enquanto o projeto não tiver assinatura digital, baixe sempre pela release oficial deste repositório do **Wellington Dias** e confira se o nome do arquivo é:
+Arquivo oficial deste projeto:
 
 ```text
 REPOTraducaoPTBRInstaller.exe
