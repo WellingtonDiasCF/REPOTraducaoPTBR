@@ -1,37 +1,77 @@
-# R.E.P.O. PT-BR Contextual Installer
+# R.E.P.O tradução PT-BR
 
-Instalador Windows para a tradução contextual PT-BR de R.E.P.O.
+Tradução contextual em português do Brasil para **R.E.P.O**, criada e organizada por **Wellington Dias**.
 
-O instalador:
+## Download Fácil
 
-- detecta a pasta do R.E.P.O. na Steam;
-- aborta se o jogo estiver aberto;
-- cria backup antes de sobrescrever arquivos;
-- instala BepInExPack e o plugin `RepoPTBRContextual`;
-- instala os arquivos `Game.tsv`, `HUD.tsv` e `Menu.tsv`;
-- salva o locale como `en-US` para evitar o fallback visual `(pt-BR) texto em inglês`, usando a tabela base sobrescrita em português.
+Baixe o instalador pronto aqui:
 
-## Como Usar
+**[REPO-Traducao-PT-BR-Installer.exe](https://github.com/WellingtonDiasCF/REPO-traducao-PT-BR/releases/latest/download/REPO-Traducao-PT-BR-Installer.exe)**
 
-Baixe e execute:
+Também há uma cópia do `.exe` direto na raiz deste repositório:
 
-```text
-REPO-PTBR-Contextual-Installer.exe
-```
+**[REPO-Traducao-PT-BR-Installer.exe](./REPO-Traducao-PT-BR-Installer.exe)**
 
-Se o instalador não encontrar a pasta automaticamente, cole o caminho da pasta que contém `REPO.exe`.
+## Instalação pelo EXE
 
-## Backup
-
-Antes de instalar, o programa cria um backup em:
+1. Feche o R.E.P.O. se ele estiver aberto.
+2. Baixe `REPO-Traducao-PT-BR-Installer.exe`.
+3. Execute o instalador.
+4. Se o Windows mostrar SmartScreen, clique em **Mais informações** e depois em **Executar assim mesmo**.
+5. O instalador tenta encontrar a pasta do jogo automaticamente pela Steam.
+6. Se ele pedir o caminho, cole a pasta que contém `REPO.exe`, por exemplo:
 
 ```text
-<pasta do jogo>\REPO_PTBR_Backups\backup_YYYY_MM_DD_HH_MM_SS
+C:\Program Files (x86)\Steam\steamapps\common\REPO
 ```
 
-Para desfazer, copie os arquivos desse backup de volta para a pasta do jogo.
+O instalador faz backup antes de sobrescrever qualquer arquivo.
 
-## Arquivos Instalados
+## Instalação Manual
+
+Use este método se não quiser usar o `.exe`.
+
+1. Feche o R.E.P.O.
+2. Abra a pasta do jogo na Steam:
+
+```text
+C:\Program Files (x86)\Steam\steamapps\common\REPO
+```
+
+3. Faça backup manual dos arquivos/pastas abaixo, se já existirem:
+
+```text
+winhttp.dll
+doorstop_config.ini
+.doorstop_version
+BepInEx\
+REPO_Data\StreamingAssets\Localizations\Game.tsv
+REPO_Data\StreamingAssets\Localizations\HUD.tsv
+REPO_Data\StreamingAssets\Localizations\Menu.tsv
+```
+
+4. Copie tudo da pasta `payload` deste projeto para dentro da pasta do jogo.
+5. Confirme a substituição dos arquivos.
+6. Abra a pasta de save/configuração do jogo:
+
+```text
+%USERPROFILE%\AppData\LocalLow\semiwork\Repo
+```
+
+7. Crie ou edite o arquivo `CurrentLocale.es3` com este conteúdo:
+
+```json
+{
+	"Locale" : {
+		"__type" : "string",
+		"value" : "en-US"
+	}
+}
+```
+
+8. Abra o jogo pela Steam.
+
+## O Que Este Projeto Instala
 
 ```text
 winhttp.dll
@@ -46,28 +86,35 @@ REPO_Data\StreamingAssets\Localizations\HUD.tsv
 REPO_Data\StreamingAssets\Localizations\Menu.tsv
 ```
 
-Também grava:
+O locale fica como `en-US` de propósito. O jogo usa fallback visual estranho quando seleciona `pt-BR`, então a tradução sobrescreve a tabela base para evitar textos com prefixo como `(pt-BR)`.
+
+## Backup Automático
+
+Antes de instalar, o `.exe` cria um backup em:
 
 ```text
-%USERPROFILE%\AppData\LocalLow\semiwork\Repo\CurrentLocale.es3
+<pasta do jogo>\REPO_PTBR_Backups\backup_YYYY_MM_DD_HH_MM_SS
 ```
 
-com `en-US`, por causa do comportamento de fallback do jogo.
+Para desfazer, copie os arquivos desse backup de volta para a pasta do jogo.
 
 ## Build
 
-No PowerShell:
+Para compilar o instalador:
 
 ```powershell
 .\build.ps1
 ```
 
-O executável sai em:
+O executável sai em dois lugares:
 
 ```text
 dist\REPO-PTBR-Contextual-Installer.exe
+REPO-Traducao-PT-BR-Installer.exe
 ```
 
 ## Créditos
 
-Este projeto empacota BepInExPack para carregar o plugin no R.E.P.O. O BepInEx e suas dependências pertencem aos seus respectivos autores.
+Projeto, organização, empacotamento e tradução contextual por **Wellington Dias**.
+
+Este projeto empacota BepInEx para carregar o plugin no R.E.P.O. O BepInEx e suas dependências pertencem aos seus respectivos autores.

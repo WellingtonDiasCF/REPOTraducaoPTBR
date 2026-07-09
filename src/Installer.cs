@@ -19,7 +19,10 @@ namespace RepoPtbrContextualInstaller
         {
             noPause = HasArg(args, "--no-pause") || HasArg(args, "/quiet") || Console.IsInputRedirected;
             Console.OutputEncoding = Encoding.UTF8;
-            Console.Title = "R.E.P.O. PT-BR Contextual Installer";
+            Console.Title = "R.E.P.O traducao PT-BR - Wellington Dias";
+            Console.WriteLine("R.E.P.O traducao PT-BR");
+            Console.WriteLine("Projeto por Wellington Dias");
+            Console.WriteLine();
 
             try
             {
@@ -47,6 +50,7 @@ namespace RepoPtbrContextualInstaller
 
                 InstallPayload(gameDir);
                 WriteLocalePreference();
+                Console.WriteLine("R.E.P.O traducao PT-BR por Wellington Dias.");
 
                 Console.WriteLine("Instalação concluída.");
                 Console.WriteLine("Abra o jogo pela Steam. A tradução usa a tabela base sobrescrita em PT-BR para evitar o prefixo (pt-BR).");
