@@ -1,132 +1,95 @@
-# R.E.P.O tradução PT-BR
+# Tradução PT-BR para R.E.P.O.
 
-Tradução contextual em português do Brasil para **R.E.P.O**, criada e organizada por **Wellington Dias**.
+**Português** · [English](README.en.md) · [Español](README.es.md)
 
-## Download Fácil
+[![Versão 1.0.0](https://img.shields.io/badge/versão-1.0.0-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
+[![Windows](https://img.shields.io/badge/Windows-Steam-1673b6?logo=steam)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
+[![Licença MIT](https://img.shields.io/badge/licença-MIT-e59a36)](LICENSE)
 
-Baixe o instalador pronto aqui:
+Tradução contextual do R.E.P.O. para português do Brasil, com instalador automático e backup dos arquivos originais.
 
-**[REPOTraducaoPTBRInstaller.exe](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)**
+## Download
 
-Também há uma cópia do `.exe` direto na raiz deste repositório:
+[**Baixar o instalador da tradução**](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)
 
-**[REPOTraducaoPTBRInstaller.exe](./REPOTraducaoPTBRInstaller.exe)**
+- Arquivo: `REPOTraducaoPTBRInstaller.exe`
+- Versão atual: 1.0.0
+- SHA-256: `BF8F6BB205167D2F68B7469740C387A26C441A3E94A6E6DDFD9C8B7321BE39A4`
 
-## Instalação pelo EXE
-
-1. Feche o R.E.P.O. se ele estiver aberto.
-2. Baixe `REPOTraducaoPTBRInstaller.exe`.
-3. Execute o instalador.
-4. Se o Windows mostrar SmartScreen, leia a seção "Aviso de Segurança" abaixo.
-5. O instalador tenta encontrar a pasta do jogo automaticamente pela Steam.
-6. Se ele pedir o caminho, cole a pasta que contém `REPO.exe`, por exemplo:
-
-```text
-C:\Program Files (x86)\Steam\steamapps\common\REPO
-```
-
-O instalador faz backup antes de sobrescrever qualquer arquivo.
-
-## Instalação Manual
-
-Use este método se não quiser usar o `.exe`.
+## Como instalar
 
 1. Feche o R.E.P.O.
-2. Abra a pasta do jogo na Steam:
+2. Baixe o instalador pelo botão acima.
+3. Execute `REPOTraducaoPTBRInstaller.exe`.
+4. O instalador tentará localizar o jogo pela Steam e mostrará a pasta encontrada.
+5. Se ele pedir um caminho, informe a pasta que contém `REPO.exe`.
+6. Depois da mensagem de conclusão, abra o jogo pela Steam.
+
+Caminho comum:
 
 ```text
 C:\Program Files (x86)\Steam\steamapps\common\REPO
 ```
 
-3. Faça backup manual dos arquivos/pastas abaixo, se já existirem:
+## Backup e remoção
 
-```text
-winhttp.dll
-doorstop_config.ini
-.doorstop_version
-BepInEx\
-REPO_Data\StreamingAssets\Localizations\Game.tsv
-REPO_Data\StreamingAssets\Localizations\HUD.tsv
-REPO_Data\StreamingAssets\Localizations\Menu.tsv
-```
-
-4. Copie tudo da pasta `payload` deste projeto para dentro da pasta do jogo.
-5. Confirme a substituição dos arquivos.
-6. Abra a pasta de save/configuração do jogo:
-
-```text
-%USERPROFILE%\AppData\LocalLow\semiwork\Repo
-```
-
-7. Crie ou edite o arquivo `CurrentLocale.es3` com este conteúdo:
-
-```json
-{
-	"Locale" : {
-		"__type" : "string",
-		"value" : "en-US"
-	}
-}
-```
-
-8. Abra o jogo pela Steam.
-
-## O Que Este Projeto Instala
-
-```text
-winhttp.dll
-doorstop_config.ini
-.doorstop_version
-BepInEx\core\...
-BepInEx\config\BepInEx.cfg
-BepInEx\plugins\RepoPTBRContextual\RepoPTBRContextual.dll
-BepInEx\plugins\RepoPTBRContextual\runtime.tsv
-REPO_Data\StreamingAssets\Localizations\Game.tsv
-REPO_Data\StreamingAssets\Localizations\HUD.tsv
-REPO_Data\StreamingAssets\Localizations\Menu.tsv
-```
-
-O locale fica como `en-US` de propósito. O jogo usa fallback visual estranho quando seleciona `pt-BR`, então a tradução sobrescreve a tabela base para evitar textos com prefixo como `(pt-BR)`.
-
-## Backup Automático
-
-Antes de instalar, o `.exe` cria um backup em:
+Antes de alterar qualquer arquivo, o instalador cria um backup em:
 
 ```text
 <pasta do jogo>\REPO_PTBR_Backups\backup_YYYY_MM_DD_HH_MM_SS
 ```
 
-Para desfazer, copie os arquivos desse backup de volta para a pasta do jogo.
+Para remover a tradução, feche o jogo e copie o conteúdo do backup mais recente de volta para a pasta do R.E.P.O., confirmando a substituição.
 
-## Aviso de Segurança
+## Depois de uma atualização do jogo
 
-Alguns navegadores e o Windows SmartScreen podem mostrar aviso porque este é um `.exe` novo, pouco baixado e sem assinatura digital pública associada a uma reputação conhecida.
+Uma atualização do R.E.P.O. pode restaurar os textos originais ou mudar as tabelas de localização. Se isso acontecer, execute novamente o instalador. Caso a tradução apresente textos faltando ou fora de contexto, consulte a [página de versões](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases) antes de reinstalar.
 
-Isso não é um erro do mod em si. É um aviso de reputação do sistema/navegador para arquivos executáveis novos distribuídos pela internet.
+## Aviso do Windows
 
-Arquivo oficial deste projeto:
+O SmartScreen pode alertar porque o instalador não possui assinatura digital comercial e ainda tem poucos downloads. Confirme que o arquivo veio deste repositório e compare o SHA-256 acima antes de executá-lo.
 
-```text
-REPOTraducaoPTBRInstaller.exe
+## Como a tradução funciona
+
+O instalador adiciona BepInEx e um plugin contextual, além de atualizar as tabelas `Game.tsv`, `HUD.tsv` e `Menu.tsv`. O locale permanece como `en-US` de propósito: a tradução substitui a tabela base para evitar o prefixo visual `(pt-BR)` mostrado pelo jogo.
+
+<details>
+<summary>Instalação manual</summary>
+
+1. Feche o R.E.P.O.
+2. Faça backup de `winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`, `BepInEx` e das tabelas em `REPO_Data\StreamingAssets\Localizations`.
+3. Copie todo o conteúdo da pasta `payload` deste repositório para a pasta do jogo.
+4. Abra `%USERPROFILE%\AppData\LocalLow\semiwork\Repo`.
+5. Crie ou edite `CurrentLocale.es3` com:
+
+```json
+{
+  "Locale": {
+    "__type": "string",
+    "value": "en-US"
+  }
+}
 ```
 
-## Build
+6. Abra o jogo pela Steam.
 
-Para compilar o instalador:
+</details>
+
+<details>
+<summary>Compilar o instalador</summary>
+
+No Windows, execute:
 
 ```powershell
 .\build.ps1
 ```
 
-O executável sai em dois lugares:
+O executável será criado em `dist\REPOTraducaoPTBRInstaller.exe` e copiado para a raiz do projeto.
 
-```text
-dist\REPOTraducaoPTBRInstaller.exe
-REPOTraducaoPTBRInstaller.exe
-```
+</details>
 
 ## Créditos
 
-Projeto, organização, empacotamento e tradução contextual por **Wellington Dias**.
+Tradução contextual, organização e instalador por **Wellington Dias**. BepInEx e suas dependências pertencem aos respectivos autores.
 
-Este projeto empacota BepInEx para carregar o plugin no R.E.P.O. O BepInEx e suas dependências pertencem aos seus respectivos autores.
+Distribuído sob a [licença MIT](LICENSE).
