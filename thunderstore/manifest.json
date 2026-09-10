@@ -2,7 +2,7 @@
   "name": "REPO_PTBR_Contextual",
   "version_number": "1.0.1",
   "website_url": "https://github.com/WellingtonDiasCF/REPOTraducaoPTBR",
-  "description": "Contextual Brazilian Portuguese translation for R.E.P.O. Includes game tables and hardcoded UI strings without replacing the original game files.",
+  "description": "Tradução contextual do R.E.P.O. para português do Brasil. Inclui tabelas do jogo e textos da interface sem substituir os arquivos originais.",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2305"
   ]

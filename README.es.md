@@ -1,16 +1,22 @@
 # Traducción al portugués de Brasil para R.E.P.O.
 
-[Português](README.pt-BR.md) · [English](README.md) · **Español**
+[Português](README.md) · [English](README.en.md) · **Español**
 
 [![Versión 1.0.1](https://img.shields.io/badge/versión-1.0.1-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-Steam-1673b6?logo=steam)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-e59a36)](LICENSE)
 
-Traducción contextual de R.E.P.O. al portugués de Brasil, con instalador automático y copia de seguridad de los archivos originales.
+Traducción contextual de R.E.P.O. al portugués de Brasil, disponible mediante un gestor de mods o un instalador independiente.
 
 > Este proyecto instala una traducción en portugués. La página en español explica cómo instalarla y restaurar el juego.
 
-## Descargar
+## Instalación recomendada
+
+[**Instalar con Thunderstore**](https://thunderstore.io/c/repo/p/WellingtonDiasCF/REPO_PTBR_Contextual/)
+
+Usa Thunderstore Mod Manager, r2modman o Gale. El gestor instala BepInEx automáticamente y mantiene la traducción aislada sin reemplazar los archivos originales del juego.
+
+## Instalador independiente
 
 [**Descargar el instalador de la traducción**](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)
 
