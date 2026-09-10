@@ -26,7 +26,18 @@ namespace RepoPTBRContextual
             PTBRTranslator.Load(Paths.PluginPath);
             harmony = new Harmony("local.repo.ptbrcontextual");
             harmony.PatchAll(typeof(RepoPTBRContextualPlugin).Assembly);
+            OverrideTools.ApplyOverridesToActiveLocales();
+            StartCoroutine(ApplyTranslationWhenReady());
             Logger.LogInfo("PT-BR contextual translation loaded.");
+        }
+
+        private IEnumerator ApplyTranslationWhenReady()
+        {
+            for (int attempt = 0; attempt < 12; attempt++)
+            {
+                yield return new WaitForSecondsRealtime(1f);
+                OverrideTools.ApplyOverridesToActiveLocales();
+            }
         }
 
         public void OnDestroy()
@@ -44,12 +55,19 @@ namespace RepoPTBRContextual
         private static readonly HashSet<string> Missing = new HashSet<string>();
         private static readonly object MissingLock = new object();
         private static string missingPath;
+        private static string localizationPath;
         private static DateTime nextOverrideApplyAt = DateTime.MinValue;
+
+        internal static string LocalizationPath
+        {
+            get { return localizationPath; }
+        }
 
         public static void Load(string pluginPath)
         {
             string ownDir = Path.Combine(pluginPath, "RepoPTBRContextual");
             string runtimePath = Path.Combine(ownDir, "runtime.tsv");
+            localizationPath = Path.Combine(ownDir, "Localizations");
             missingPath = Path.Combine(Paths.ConfigPath, "RepoPTBRContextual.missing.tsv");
 
             Exact.Clear();
@@ -142,14 +160,14 @@ namespace RepoPTBRContextual
         {
             try
             {
-                string localizationDir = Path.Combine(Application.streamingAssetsPath, "Localizations");
-                string defaultDir = Path.Combine(localizationDir, "Default");
+                string gameLocalizationDir = Path.Combine(Application.streamingAssetsPath, "Localizations");
+                string defaultDir = Path.Combine(gameLocalizationDir, "Default");
                 string[] files = { "HUD.tsv", "Menu.tsv", "Game.tsv" };
 
                 for (int i = 0; i < files.Length; i++)
                 {
                     Dictionary<string, string> english = ReadTsv(Path.Combine(defaultDir, files[i]));
-                    Dictionary<string, string> ptbr = ReadTsv(Path.Combine(localizationDir, files[i]));
+                    Dictionary<string, string> ptbr = ReadTsv(Path.Combine(localizationPath, files[i]));
                     foreach (KeyValuePair<string, string> pair in english)
                     {
                         string translated;
@@ -316,7 +334,12 @@ namespace RepoPTBRContextual
         {
             try
             {
-                string dir = Path.Combine(Application.streamingAssetsPath, "Localizations");
+                string dir = PTBRTranslator.LocalizationPath;
+                if (string.IsNullOrEmpty(dir) || !Directory.Exists(dir))
+                {
+                    UnityEngine.Debug.LogWarning("[RepoPTBRContextual] Bundled localization tables were not found.");
+                    return;
+                }
                 string[] tables = { "HUD", "Menu", "Game" };
                 List<Locale> locales = GetTargetLocales();
                 int applied = 0;
@@ -339,8 +362,9 @@ namespace RepoPTBRContextual
 
                 UnityEngine.Debug.Log("[RepoPTBRContextual] Applied " + applied + " localization override entries to " + locales.Count + " locale(s).");
             }
-            catch
+            catch (Exception ex)
             {
+                UnityEngine.Debug.LogWarning("[RepoPTBRContextual] Localization tables are not ready yet: " + ex.Message);
             }
         }
 

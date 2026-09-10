@@ -1,66 +1,68 @@
-# Tradução PT-BR para R.E.P.O.
+# Brazilian Portuguese translation for R.E.P.O.
 
-**Português** · [English](README.en.md) · [Español](README.es.md)
+[Português](README.pt-BR.md) · **English** · [Español](README.es.md)
 
-[![Versão 1.0.0](https://img.shields.io/badge/versão-1.0.0-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
+[![Version 1.0.1](https://img.shields.io/badge/version-1.0.1-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-Steam-1673b6?logo=steam)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
-[![Licença MIT](https://img.shields.io/badge/licença-MIT-e59a36)](LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-e59a36)](LICENSE)
 
-Tradução contextual do R.E.P.O. para português do Brasil, com instalador automático e backup dos arquivos originais.
+A contextual Brazilian Portuguese translation for R.E.P.O., with an automatic installer and backups of the original files.
+
+> This project installs a Portuguese translation. The English page is provided to explain installation and recovery.
 
 ## Download
 
-[**Baixar o instalador da tradução**](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)
+[**Download the translation installer**](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)
 
-- Arquivo: `REPOTraducaoPTBRInstaller.exe`
-- Versão atual: 1.0.0
-- SHA-256: `BF8F6BB205167D2F68B7469740C387A26C441A3E94A6E6DDFD9C8B7321BE39A4`
+- File: `REPOTraducaoPTBRInstaller.exe`
+- Current version: 1.0.1
+- SHA-256: `9AAA561684DB8ABC48A1397C786A30F434A49FE4C8C54882E535302AC50AE9E0`
 
-## Como instalar
+## Installation
 
-1. Feche o R.E.P.O.
-2. Baixe o instalador pelo botão acima.
-3. Execute `REPOTraducaoPTBRInstaller.exe`.
-4. O instalador tentará localizar o jogo pela Steam e mostrará a pasta encontrada.
-5. Se ele pedir um caminho, informe a pasta que contém `REPO.exe`.
-6. Depois da mensagem de conclusão, abra o jogo pela Steam.
+1. Close R.E.P.O.
+2. Download the installer using the button above.
+3. Run `REPOTraducaoPTBRInstaller.exe`.
+4. The installer will try to locate the game through Steam and display the detected folder.
+5. If it asks for a path, select the folder containing `REPO.exe`.
+6. After the completion message, launch the game through Steam.
 
-Caminho comum:
+Common path:
 
 ```text
 C:\Program Files (x86)\Steam\steamapps\common\REPO
 ```
 
-## Backup e remoção
+## Backup and removal
 
-Antes de alterar qualquer arquivo, o instalador cria um backup em:
+Before changing any files, the installer creates a backup at:
 
 ```text
-<pasta do jogo>\REPO_PTBR_Backups\backup_YYYY_MM_DD_HH_MM_SS
+<game folder>\REPO_PTBR_Backups\backup_YYYY_MM_DD_HH_MM_SS
 ```
 
-Para remover a tradução, feche o jogo e copie o conteúdo do backup mais recente de volta para a pasta do R.E.P.O., confirmando a substituição.
+To remove the translation, close the game and copy the contents of the newest backup back into the R.E.P.O. folder, allowing Windows to replace the modified files.
 
-## Depois de uma atualização do jogo
+## After a game update
 
-Uma atualização do R.E.P.O. pode restaurar os textos originais ou mudar as tabelas de localização. Se isso acontecer, execute novamente o instalador. Caso a tradução apresente textos faltando ou fora de contexto, consulte a [página de versões](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases) antes de reinstalar.
+A R.E.P.O. update may restore the original text or change localization tables. If that happens, run the installer again. Check the [Releases page](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases) first if any text is missing or appears in the wrong context.
 
-## Aviso do Windows
+## Windows warning
 
-O SmartScreen pode alertar porque o instalador não possui assinatura digital comercial e ainda tem poucos downloads. Confirme que o arquivo veio deste repositório e compare o SHA-256 acima antes de executá-lo.
+SmartScreen may display a warning because the installer does not have a commercial digital signature and has a limited download history. Confirm that the file came from this repository and compare its SHA-256 value before running it.
 
-## Como a tradução funciona
+## How it works
 
-O instalador adiciona BepInEx e um plugin contextual, além de atualizar as tabelas `Game.tsv`, `HUD.tsv` e `Menu.tsv`. O locale permanece como `en-US` de propósito: a tradução substitui a tabela base para evitar o prefixo visual `(pt-BR)` mostrado pelo jogo.
+The installer adds BepInEx and a contextual plugin, then updates the `Game.tsv`, `HUD.tsv`, and `Menu.tsv` tables. The locale intentionally remains set to `en-US`: the translation replaces the base table to avoid the `(pt-BR)` prefix displayed by the game.
 
 <details>
-<summary>Instalação manual</summary>
+<summary>Manual installation</summary>
 
-1. Feche o R.E.P.O.
-2. Faça backup de `winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`, `BepInEx` e das tabelas em `REPO_Data\StreamingAssets\Localizations`.
-3. Copie todo o conteúdo da pasta `payload` deste repositório para a pasta do jogo.
-4. Abra `%USERPROFILE%\AppData\LocalLow\semiwork\Repo`.
-5. Crie ou edite `CurrentLocale.es3` com:
+1. Close R.E.P.O.
+2. Back up `winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`, `BepInEx`, and the tables in `REPO_Data\StreamingAssets\Localizations`.
+3. Copy everything from this repository's `payload` folder into the game folder.
+4. Open `%USERPROFILE%\AppData\LocalLow\semiwork\Repo`.
+5. Create or edit `CurrentLocale.es3` with:
 
 ```json
 {
@@ -71,25 +73,25 @@ O instalador adiciona BepInEx e um plugin contextual, além de atualizar as tabe
 }
 ```
 
-6. Abra o jogo pela Steam.
+6. Launch the game through Steam.
 
 </details>
 
 <details>
-<summary>Compilar o instalador</summary>
+<summary>Build the installer</summary>
 
-No Windows, execute:
+Run on Windows:
 
 ```powershell
 .\build.ps1
 ```
 
-O executável será criado em `dist\REPOTraducaoPTBRInstaller.exe` e copiado para a raiz do projeto.
+The executable is generated at `dist\REPOTraducaoPTBRInstaller.exe` and copied to the repository root.
 
 </details>
 
-## Créditos
+## Credits
 
-Tradução contextual, organização e instalador por **Wellington Dias**. BepInEx e suas dependências pertencem aos respectivos autores.
+Contextual translation, packaging, and installer by **Wellington Dias**. BepInEx and its dependencies belong to their respective authors.
 
-Distribuído sob a [licença MIT](LICENSE).
+Distributed under the [MIT License](LICENSE).

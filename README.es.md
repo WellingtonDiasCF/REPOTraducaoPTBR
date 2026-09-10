@@ -1,8 +1,8 @@
 # Traducción al portugués de Brasil para R.E.P.O.
 
-[Português](README.md) · [English](README.en.md) · **Español**
+[Português](README.pt-BR.md) · [English](README.md) · **Español**
 
-[![Versión 1.0.0](https://img.shields.io/badge/versión-1.0.0-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
+[![Versión 1.0.1](https://img.shields.io/badge/versión-1.0.1-7a5cff)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-Steam-1673b6?logo=steam)](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-e59a36)](LICENSE)
 
@@ -15,8 +15,8 @@ Traducción contextual de R.E.P.O. al portugués de Brasil, con instalador autom
 [**Descargar el instalador de la traducción**](https://github.com/WellingtonDiasCF/REPOTraducaoPTBR/releases/latest/download/REPOTraducaoPTBRInstaller.exe)
 
 - Archivo: `REPOTraducaoPTBRInstaller.exe`
-- Versión actual: 1.0.0
-- SHA-256: `BF8F6BB205167D2F68B7469740C387A26C441A3E94A6E6DDFD9C8B7321BE39A4`
+- Versión actual: 1.0.1
+- SHA-256: `9AAA561684DB8ABC48A1397C786A30F434A49FE4C8C54882E535302AC50AE9E0`
 
 ## Instalación
 

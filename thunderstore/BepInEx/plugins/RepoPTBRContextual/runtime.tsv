@@ -1,0 +1,59 @@
+# Runtime translations for hardcoded/modded UI strings.
+REPO Fidelity	Fidelidade R.E.P.O.
+Quality Preset	Preset de qualidade
+Shadow Quality	Qualidade das sombras
+Shadow Distance	Distância das sombras
+Shadow Limit	Limite de sombras
+Light Distance	Distância da luz
+Max Lights	Máximo de luzes
+Texture Quality	Qualidade das texturas
+Texture Filtering	Filtragem de textura
+Detail Distance	Distância de detalhes
+Upscaler	Escalonamento
+Render Scale	Escala de renderização
+Sharpening	Nitidez
+Anti-Aliasing	Anti-serrilhado
+Vertical FOV	FOV vertical
+Ultra-Wide UI Fix	Correção de UI ultrawide
+Ultra-Wide HUD Unstretch	Desesticar HUD ultrawide
+Fog Distance	Distância da neblina
+Draw Distance	Distância de desenho
+Fix Extraction Flicker	Corrigir flicker da extração
+Debug Overlay	Sobreposição de debug
+Mod Toggle Key	Tecla para alternar mod
+F11 Target	Alvo do F11
+Motion Blur	Desfoque de movimento
+Chromatic Aberration	Aberração cromática
+Lens Distortion	Distorção da lente
+Film Grain	Granulação
+Pixelation	Pixelização
+Explosion Shadows	Sombras de explosões
+Item Light Shadows	Sombras de luzes dos itens
+Animated Light Shadows	Sombras de luzes animadas
+Particle Shadows	Sombras de partículas
+Small Object Shadows	Sombras de objetos pequenos
+Point Light Shadows	Sombras de luzes pontuais
+Hidden	Oculto
+Potato	Batata
+Low	Baixo
+Medium	Médio
+High	Alto
+Ultra	Ultra
+Custom	Personalizado
+Auto	Automático
+Keep	Manter
+Disable	Desativar
+Off	Desligado
+On	Ligado
+Full	Completo
+Half	Metade
+Quarter	Um quarto
+None	Nenhum
+TAA	TAA
+SMAA	SMAA
+FXAA	FXAA
+DLSS	DLSS
+DLAA	DLAA
+FSR	FSR
+R.E.P.O. Always Bright	R.E.P.O. Sempre Claro
+R.E.P.O. PT-BR Contextual	R.E.P.O. PT-BR Contextual
